@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: webshop
+  profiles:
+    active: common
+server:
+  port: 8080
+obelix:
+  clients:
+    quarry-url: ${OBELIX_CLIENTS_QUARRY_URL:http://localhost:8081}
+    basket-url: ${OBELIX_CLIENTS_BASKET_URL:http://localhost:8082}

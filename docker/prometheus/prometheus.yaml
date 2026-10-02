@@ -1,0 +1,18 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: obelix-webshop
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: [obelix-webshop:8080]
+
+  - job_name: obelix-quarry
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: [obelix-quarry:8081]
+
+  - job_name: obelix-basket
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: [obelix-basket:8082]
